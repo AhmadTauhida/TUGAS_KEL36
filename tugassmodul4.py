@@ -34,4 +34,13 @@ class Program:
             print("Pilihan metode pembayaran tidak valid!")
             return 0
 
+    def konfirmasi_pemesanan(self, nama, kategori, jumlah_tiket, metode_pembayaran, total_harga):
+        kategori_nama = {1: "VIP", 2: "Reguler", 3: "Budget"}
+        metode_nama = {1: "Transfer Bank", 2: "Cash"}
 
+        print(f"\nKonfirmasi Pemesanan:")
+        print(f"Nama: {nama}")
+        print(f"Kategori: {kategori_nama.get(kategori, 'Tidak valid')}")
+        print(f"Jumlah Tiket: {jumlah_tiket}")
+        print(f"Metode Pembayaran: {metode_nama.get(metode_pembayaran, 'Tidak valid')}")
+        print(f"Total Harga: Rp {total_harga:,}")
